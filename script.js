@@ -219,22 +219,19 @@ if (contactForm) {
     submitButton.textContent = "Sending...";
 
     try {
-      const response = await fetch(
-        "http://localhost:3001/api/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, email, message }),
-        }
-      );
+      const response = await fetch("http://localhost:3001/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
 
       const data = await response.json();
 
       if (response.ok) {
         alert(
-          "Thank you! Your message has been sent successfully. I'll get back to you soon!"
+          "Thank you! Your message has been sent successfully. I'll get back to you soon!",
         );
         contactForm.reset();
       } else {
@@ -243,7 +240,7 @@ if (contactForm) {
     } catch (error) {
       console.error("Error:", error);
       alert(
-        "Error sending message. Please make sure the backend server is running on port 3001."
+        "Error sending message. Please make sure the backend server is running on port 3001.",
       );
     } finally {
       submitButton.disabled = false;
