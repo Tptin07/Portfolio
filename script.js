@@ -198,21 +198,56 @@ document
 
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     // Get form values
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
+    const submitButton = contactForm.querySelector('button[type="submit"]');
 
     // Simple validation
-    if (name.trim() && email.trim() && message.trim()) {
-      // In a real application, send this data to a backend
-      alert(`Thank you, ${name}! Your message has been received.`);
-      contactForm.reset();
-    } else {
+    if (!name.trim() || !email.trim() || !message.trim()) {
       alert("Please fill in all fields.");
+      return;
+    }
+
+    // Disable button during submission
+    submitButton.disabled = true;
+    const originalText = submitButton.textContent;
+    submitButton.textContent = "Sending...";
+
+    try {
+      const response = await fetch(
+        "http://localhost:3001/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, message }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(
+          "Thank you! Your message has been sent successfully. I'll get back to you soon!"
+        );
+        contactForm.reset();
+      } else {
+        alert(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert(
+        "Error sending message. Please make sure the backend server is running on port 3001."
+      );
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
     }
   });
 }
