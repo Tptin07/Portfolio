@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Portfolio | Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Animated Technology Background -->
+    <div class="tech-bg">
+      <div class="animated-bg" id="animatedBg"></div>
+      <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Portfolio</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">Về tôi</a></li>
+          <li><a href="#skills">Kỹ năng</a></li>
+          <li><a href="#projects">Dự án</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">Xin chào, tôi là Trần Phước Tín</span>
+          <span class="name-highlight">Developer IT</span>
+        </h1>
+        <p class="hero-subtitle">
+          Tạo ra những giải pháp công nghệ sáng tạo và hiệu quả
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Liên hệ tôi</a>
+          <a href="#projects" class="btn btn-secondary">Xem dự án</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">Về Tôi</h2>
+        <div class="about-grid">
+          <div class="about-image">
+            <div class="image-placeholder">
+              <img id="profileImage" src="./public/avt.jpg" alt="Profile" />
+            </div>
+          </div>
+          <div class="about-content">
+            <h3>Chào bạn!</h3>
+            <p>
+              Tôi là một lập trình viên IT đam mê với công nghệ và phát triển
+              web. Với kinh nghiệm trong việc xây dựng các ứng dụng web hiện
+              đại, tôi luôn tìm kiếm những thách thức mới để phát triển kỹ năng
+              của mình.
+            </p>
+            <p>
+              Tôi chuyên về phát triển fullstack, từ frontend đến backend, với
+              tập trung vào việc tạo ra những trải nghiệm người dùng tuyệt vời.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Tên:</span>
+                <span class="info-value">Trần Phước Tín</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Vị trí:</span>
+                <span class="info-value">IT Developer</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Thành phố:</span>
+                <span class="info-value">Đà Nẵng</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Email:</span>
+                <span class="info-value">ptin923@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Kỹ Năng & Công Nghệ</h2>
+
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category">
+            <h3 class="category-title">Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category">
+            <h3 class="category-title">Backend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">API REST</span>
+              <span class="skill-tag">GraphQL</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <!-- Tools & Other -->
+          <div class="skill-category">
+            <h3 class="category-title">Tools & Công Cụ</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Dự Án của Tôi</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                id="project1Image"
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Project+1"
+                alt="Project 1"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn">Xem chi tiết</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dự Án 1: E-Commerce Platform</h3>
+              <p>
+                Một nền tảng thương mại điện tử hiện đại được xây dựng với React
+                và Node.js, hỗ trợ thanh toán trực tuyến và quản lý sản phẩm.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Stripe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                id="project2Image"
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Project+2"
+                alt="Project 2"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn">Xem chi tiết</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dự Án 2: Chat Application</h3>
+              <p>
+                Ứng dụng chat realtime với các tính năng như nhắn tin trực tiếp,
+                chia sẻ file, và thông báo. Sử dụng Socket.io để giao tiếp
+                realtime.
+              </p>
+              <div class="project-tech">
+                <span>Vue.js</span>
+                <span>Node.js</span>
+                <span>Socket.io</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                id="project3Image"
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Project+3"
+                alt="Project 3"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn">Xem chi tiết</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dự Án 3: Task Management System</h3>
+              <p>
+                Hệ thống quản lý công việc toàn diện cho các nhóm, với tính năng
+                gán việc, theo dõi tiến độ, và báo cáo.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Python Flask</span>
+                <span>PostgreSQL</span>
+                <span>Redux</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                id="project4Image"
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Project+4"
+                alt="Project 4"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn">Xem chi tiết</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Dự Án 4: Weather Dashboard</h3>
+              <p>
+                Ứng dụng hiển thị thông tin thời tiết với giao diện tương tác,
+                dự báo chi tiết, và lịch sử thời tiết các địa điểm.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>API Weather</span>
+                <span>Chart.js</span>
+                <span>Local Storage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Liên Hệ Với Tôi</h2>
+        <div class="contact-content">
+          <p class="contact-text">
+            Bạn có một dự án hoặc đề xuất? Tôi luôn sẵn sàng lắng nghe và hợp
+            tác.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <h3>Email</h3>
+              <a href="mailto:your@email.com">your@email.com</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">💼</div>
+              <h3>LinkedIn</h3>
+              <a href="https://linkedin.com" target="_blank"
+                >linkedin.com/in/yourprofile</a
+              >
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">👨‍💻</div>
+              <h3>GitHub</h3>
+              <a href="https://github.com" target="_blank"
+                >github.com/yourprofile</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 My Portfolio. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

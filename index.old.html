@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio - Developer & IT Professional</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <select id="languageSelect" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="vi">Tiếng Việt</option>
+      </select>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+      <div class="chat-header">
+        <span data-i18n="livechat">Live Chat</span>
+        <button class="chat-close" onclick="toggleChat()">&times;</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">
+          <p data-i18n="welcome">Welcome! How can I help you?</p>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Type a message..."
+          data-i18n-placeholder="Type a message..."
+        />
+        <button onclick="sendMessage()">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="chat-bubble" id="chatBubble" onclick="toggleChat()">
+      <i class="fas fa-comments"></i>
+      <span class="bubble-text" data-i18n="chat">Chat</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span data-i18n="portfolio">Portfolio</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#hero" data-i18n="home">Home</a></li>
+          <li><a href="#skills" data-i18n="skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="projects">Projects</a></li>
+          <li><a href="#about" data-i18n="about">About</a></li>
+          <li><a href="#blog" data-i18n="blog">Blog</a></li>
+          <li><a href="#contact" data-i18n="contact">Contact</a></li>
+        </ul>
+        <div class="nav-search">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search..."
+            data-i18n-placeholder="Search..."
+          />
+          <button onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <canvas id="particleCanvas"></canvas>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="heroTitle">Hi, I'm Developer</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Creative Solutions | Modern Technology
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" data-i18n="viewWork"
+            >View My Work</a
+          >
+          <a href="#contact" class="btn btn-secondary" data-i18n="contact"
+            >Get In Touch</a
+          >
+          <a href="#" class="btn btn-download" download data-i18n="downloadCV"
+            >Download CV</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title" data-i18n="mySkills">My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 data-i18n="frontend">Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 data-i18n="backend">Backend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">API REST</span>
+              <span class="skill-tag">GraphQL</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 data-i18n="tools">Tools & Technologies</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title" data-i18n="myProjects">My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=E-Commerce"
+                alt="Project"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn" data-i18n="viewDetails"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 data-i18n="ecommerce">E-Commerce Platform</h3>
+              <p data-i18n="ecommerceDesc">
+                Modern e-commerce platform with payment integration
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Chat+App"
+                alt="Project"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn" data-i18n="viewDetails"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 data-i18n="chatapp">Real-time Chat Application</h3>
+              <p data-i18n="chatappDesc">
+                Live messaging with Socket.io integration
+              </p>
+              <div class="project-tech">
+                <span>Vue.js</span>
+                <span>Socket.io</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Task+Manager"
+                alt="Project"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn" data-i18n="viewDetails"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 data-i18n="taskmanager">Task Management System</h3>
+              <p data-i18n="taskmanagerDesc">
+                Team collaboration tool with real-time updates
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Python</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://via.placeholder.com/400x250/1a1f3a/00d4ff?text=Dashboard"
+                alt="Project"
+              />
+              <div class="project-overlay">
+                <a href="#" class="view-btn" data-i18n="viewDetails"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 data-i18n="dashboard">Analytics Dashboard</h3>
+              <p data-i18n="dashboardDesc">
+                Real-time data visualization and analytics
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Chart.js</span>
+                <span>API REST</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title" data-i18n="aboutMe">About Me</h2>
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="./public/avt.jpg" alt="Profile" />
+          </div>
+          <div class="about-content">
+            <h3 data-i18n="hello">Hello!</h3>
+            <p data-i18n="aboutText1">
+              I'm a passionate web developer with experience in creating modern,
+              scalable web applications. I love solving complex problems and
+              building beautiful user interfaces.
+            </p>
+            <p data-i18n="aboutText2">
+              With expertise in both frontend and backend technologies, I
+              deliver end-to-end solutions that meet your business needs.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-item">
+                <span data-i18n="name">Name:</span>
+                <span>Your Name</span>
+              </div>
+              <div class="info-item">
+                <span data-i18n="position">Position:</span>
+                <span data-i18n="developer">Fullstack Developer</span>
+              </div>
+              <div class="info-item">
+                <span data-i18n="location">Location:</span>
+                <span>Vietnam</span>
+              </div>
+              <div class="info-item">
+                <span data-i18n="experience">Experience:</span>
+                <span>5+ Years</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Technical Articles Section -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <h2 class="section-title" data-i18n="blog">Technical Articles</h2>
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <div class="blog-image">
+              <img
+                src="https://via.placeholder.com/400x200/1a1f3a/00d4ff?text=Article+1"
+                alt="Article"
+              />
+            </div>
+            <div class="blog-content">
+              <h3 data-i18n="blogTitle1">Building Scalable Web Applications</h3>
+              <p class="blog-date" data-i18n="date">March 2, 2026</p>
+              <p data-i18n="blogDesc1">
+                Learn best practices for building applications that can handle
+                millions of users...
+              </p>
+              <a href="#" class="read-more" data-i18n="readMore">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blog-image">
+              <img
+                src="https://via.placeholder.com/400x200/1a1f3a/00d4ff?text=Article+2"
+                alt="Article"
+              />
+            </div>
+            <div class="blog-content">
+              <h3 data-i18n="blogTitle2">React Performance Optimization</h3>
+              <p class="blog-date" data-i18n="date">February 28, 2026</p>
+              <p data-i18n="blogDesc2">
+                Tips and tricks to optimize your React applications for better
+                performance...
+              </p>
+              <a href="#" class="read-more" data-i18n="readMore">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blog-image">
+              <img
+                src="https://via.placeholder.com/400x200/1a1f3a/00d4ff?text=Article+3"
+                alt="Article"
+              />
+            </div>
+            <div class="blog-content">
+              <h3 data-i18n="blogTitle3">Docker for Web Developers</h3>
+              <p class="blog-date" data-i18n="date">February 25, 2026</p>
+              <p data-i18n="blogDesc3">
+                A comprehensive guide to containerizing your applications with
+                Docker...
+              </p>
+              <a href="#" class="read-more" data-i18n="readMore">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe by Email Section -->
+    <section class="subscribe-section">
+      <div class="container">
+        <div class="subscribe-card">
+          <h2 data-i18n="subscribeTitle">Stay Updated</h2>
+          <p data-i18n="subscribeDesc">
+            Subscribe to my newsletter for latest articles and updates
+          </p>
+          <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+            <input
+              type="email"
+              placeholder="Your email..."
+              data-i18n-placeholder="Your email..."
+              required
+            />
+            <button type="submit" class="btn btn-primary" data-i18n="subscribe">
+              Subscribe
+            </button>
+          </form>
+          <p class="subscribe-note" data-i18n="subscribeNote">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Documentation Section -->
+    <section class="docs" id="docs">
+      <div class="container">
+        <h2 class="section-title" data-i18n="technicalDocs">
+          Technical Documentation
+        </h2>
+        <div class="docs-grid">
+          <div class="doc-card">
+            <h3>
+              <i class="fas fa-code"></i>
+              <span data-i18n="apiDocs">API Documentation</span>
+            </h3>
+            <p data-i18n="apiDocsDesc">
+              Complete REST API documentation with examples and use cases
+            </p>
+            <a href="#" class="read-link" data-i18n="explore">Explore →</a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <i class="fas fa-book"></i>
+              <span data-i18n="guidebook">Developer Guide</span>
+            </h3>
+            <p data-i18n="guideDesc">
+              Step-by-step guide for integrating our services
+            </p>
+            <a href="#" class="read-link" data-i18n="explore">Explore →</a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <i class="fas fa-terminal"></i>
+              <span data-i18n="codeExamples">Code Examples</span>
+            </h3>
+            <p data-i18n="examplesDesc">
+              Real-world code examples in multiple languages
+            </p>
+            <a href="#" class="read-link" data-i18n="explore">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n="getInTouch">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-methods">
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <h3 data-i18n="email">Email</h3>
+              <a href="mailto:your@email.com">your@email.com</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <h3 data-i18n="phone">Phone</h3>
+              <a href="tel:+84123456789">+84 123 456 789</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 data-i18n="location">Location</h3>
+              <p>Vietnam</p>
+            </div>
+          </div>
+
+          <form class="contact-form" onsubmit="handleSendEmail(event)">
+            <h3 data-i18n="sendMessage">Send Me a Message</h3>
+            <input
+              type="text"
+              placeholder="Your Name"
+              data-i18n-placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              data-i18n-placeholder="Your Email"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Subject"
+              data-i18n-placeholder="Subject"
+              required
+            />
+            <textarea
+              placeholder="Message"
+              data-i18n-placeholder="Message"
+              rows="5"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-i18n="sendMessage"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2026 My Portfolio.
+        <span data-i18n="allRights">All rights reserved</span>.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

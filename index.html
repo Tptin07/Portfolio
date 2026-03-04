@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tran Phuoc Tin - Software Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="dark-theme">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle" id="langToggle">
+      <span class="lang-vi">VI</span>
+      <span class="lang-sep">|</span>
+      <span class="lang-en">EN</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-text">Tin </span>
+          <span class="logo-dot">.</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home" class="active" data-vi="Trang chủ" data-en="Home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#skills" data-vi="Kỹ năng" data-en="Skills">Skills</a>
+          </li>
+          <li><a href="#resume" data-vi="Hồ sơ" data-en="Resume">Resume</a></li>
+          <li><a href="#work" data-vi="Dự án" data-en="Work">Work</a></li>
+          <li>
+            <a href="#contact" data-vi="Liên hệ" data-en="Contact">Contact</a>
+          </li>
+        </ul>
+        <a href="#contact" class="btn-hire" data-vi="Thuê tôi" data-en="Hire me"
+          >Hire me</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p
+              class="hero-label"
+              data-vi="Lập trình viên phần mềm"
+              data-en="Software Developer"
+            >
+              Software Developer
+            </p>
+            <h1 class="hero-title">
+              <span data-vi="Xin chào! Tôi là" data-en="Hello I'm"
+                >Hello I'm</span
+              >
+              <span class="highlight"> Tran Phuoc Tin</span>
+            </h1>
+            <p
+              class="hero-description"
+              data-vi="Tôi giỏi tạo ra những trải nghiệm kỹ thuật số tinh tế và thành thạo nhiều ngôn ngữ lập trình cũng như công nghệ hiện đại."
+              data-en="I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies."
+            >
+              I excel at crafting elegant digital experiences and I am
+              proficient in various programming languages and technologies.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                href="#contact"
+                class="btn btn-primary"
+                data-vi="TẢI CV"
+                data-en="DOWNLOAD CV"
+              >
+                <i class="fas fa-download"></i> DOWNLOAD CV
+              </a>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-icon" title="Portfolio">
+                <i class="fas fa-circle"></i>
+              </a>
+              <a href="#" class="social-icon" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/_toilatin/"
+                class="social-icon"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/tran.cris.77"
+                class="social-icon"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@_toilatin?is_from_webapp=1&sender_device=pc"
+                class="social-icon"
+                title="TikTok"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <div class="image-wrapper">
+              <img src="./public/avt.jpg" alt="Profile Photo" />
+              <div class="image-border"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">4</div>
+            <div
+              class="stat-label"
+              data-vi="Sinh viên năm 4<br />Đại học Duy Tân"
+              data-en="Student of<br />Duy Tan University"
+            >
+              Student of<br />Duy Tan University
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div
+              class="stat-label"
+              data-vi="Dự án<br />đã hoàn thành"
+              data-en="Projects<br />completed"
+            >
+              Projects<br />completed
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div
+              class="stat-label"
+              data-vi="Công nghệ<br />thành thạo"
+              data-en="Technologies<br />mastered"
+            >
+              Technologies<br />mastered
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">500</div>
+            <div
+              class="stat-label"
+              data-vi="Lần<br />commit code"
+              data-en="Code<br />commits"
+            >
+              Code<br />commits
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title" data-vi="Kỹ năng của tôi" data-en="My Skills">
+          My Skills
+        </h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 data-vi="Phát triển Web" data-en="Web Development">
+              Web Development
+            </h3>
+            <p
+              data-vi="Xây dựng website hiện đại và đáp ứng tốt với các công nghệ mới nhất và các thực hành tốt nhất."
+              data-en="Creating responsive and modern websites with latest technologies and best practices."
+            >
+              Creating responsive and modern websites with latest technologies
+              and best practices.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 data-vi="Phát triển Frontend" data-en="Frontend Development">
+              Frontend Development
+            </h3>
+            <p
+              data-vi="Thiết kế giao diện người dùng hiện đại, tối ưu hiệu năng và trải nghiệm người dùng xuất sắc."
+              data-en="Creating beautiful and interactive user interfaces with React, Vue.js and modern frameworks."
+            >
+              Creating beautiful and interactive user interfaces with React,
+              Vue.js and modern frameworks.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 data-vi="Phát triển Backend" data-en="Backend Development">
+              Backend Development
+            </h3>
+            <p
+              data-vi="Tạo ra giao diện người dùng đẹp mắt và trực quan theo các nguyên tắc thiết kế hiện đại."
+              data-en="Designing scalable server architectures and APIs with robust database solutions."
+            >
+              Designing scalable server architectures and APIs with robust
+              database solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="tech-stack">
+          <div class="tech-item" data-tooltip="HTML">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="tech-item" data-tooltip="CSS">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="tech-item" data-tooltip="React">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="tech-item" data-tooltip="Node.js">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <div class="tech-item" data-tooltip="MySQL">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="tech-item" data-tooltip="Figma">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="tech-item" data-tooltip="Photoshop">
+            <span class="ps-logo">Ps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume" id="resume">
+      <div class="container">
+        <h2 class="section-title" data-vi="Hồ sơ của tôi" data-en="My Resume">
+          My Resume
+        </h2>
+        <div class="resume-grid">
+          <div class="resume-column">
+            <h3 data-vi="Học vấn" data-en="Education">Education</h3>
+            <div class="resume-item">
+              <h4
+                data-vi="Sinh viên năm 4 ngành Công Nghệ Phần Mềm - Đại học Duy Tân"
+                data-en="Fourth-year Software Engineering student - Duy Tan University"
+              >
+                Fourth-year Software Engineering student - Duy Tan University
+              </h4>
+              <p class="resume-year">2022 - 2026</p>
+              <p
+                class="resume-description"
+                data-vi="Đại học Duy Tân - GPA 3.22/4.0"
+                data-en="Duy Tan University - GPA 3.22/4.0"
+              >
+                Duy Tan University - GPA 3.22/4.0
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-column">
+            <h3 data-vi="Kinh nghiệm" data-en="Experience">Experience</h3>
+            <div class="resume-item">
+              <h4
+                data-vi="Thực tập sinh lập trình viên"
+                data-en="Intern Developer"
+              >
+                Intern Developer
+              </h4>
+              <p class="resume-year">2026 - Present</p>
+              <p
+                class="resume-description"
+                data-vi="Tinh thần trách nhiệm cao trong công việc, luôn sẵn sàng học hỏi và phát triển kỹ năng mới"
+                data-en="Highly responsible in their work, always ready to learn and develop new skills."
+              >
+                Highly responsible in their work, always ready to learn and
+                develop new skills.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4
+                data-vi="Lập trình viên Frontend"
+                data-en="Frontend Developer"
+              >
+                Frontend Developer
+              </h4>
+              <p class="resume-year">2026 - Present</p>
+              <p
+                class="resume-description"
+                data-vi="Phát triển ứng dụng web với React, Node.js và cơ sở dữ liệu"
+                data-en="Developing web applications with React, Node.js and databases"
+              >
+                Developing web applications with React, Node.js and databases
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4
+                data-vi="Thiết kế giao diện người dùng"
+                data-en="UI/UX Design"
+              >
+                UI/UX Designer
+              </h4>
+              <p class="resume-year">2024 - Present</p>
+              <p
+                class="resume-description"
+                data-vi="Sử dụng Figma, Photoshop để tạo ra giao diện người dùng đẹp mắt và trực quan"
+                data-en="Using Figma, Photoshop to create beautiful and intuitive user interfaces"
+              >
+                Using Figma, Photoshop to create beautiful and intuitive user
+                interfaces
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+      <div class="container">
+        <h2 class="section-title" data-vi="Dự án của tôi" data-en="My Work">
+          My Work
+        </h2>
+        <div class="work-grid">
+          <div class="work-card">
+            <img src="./public/hieuthuocviet.png" alt="Project" />
+            <div class="work-overlay">
+              <h3
+                data-vi="Hiệu thuốc Việt - Hiệu thuốc trực tuyến"
+                data-en="Vietnamese Pharmacy - Online Pharmacy"
+              >
+                Vietnamese Pharmacy - Online Pharmacy
+              </h3>
+              <p
+                data-vi="Nền tảng mua sắm hiện đại với nhiều sản phẩm y tế và chăm sóc sức khỏe"
+                data-en="Modern shopping platform with a wide range of medical and healthcare products"
+              >
+                Modern shopping platform with a wide range of medical and
+                healthcare products
+              </p>
+              <a
+                href="https://github.com/Tptin07/CDIO4-Fullstack.git"
+                class="work-link"
+                data-vi="Xem dự án →"
+                data-en="View Project →"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Project →</a
+              >
+            </div>
+          </div>
+          <div class="work-card">
+            <img src="./public/vovalmaster.png" alt="Project" />
+            <div class="work-overlay">
+              <h3 data-vi="Luyện tập từ vựng" data-en="Vocabulary Practice">
+                Vocabulary Practice
+              </h3>
+              <p
+                data-vi="Luyện tập từ vựng với nhieu chế độ khác nhau và giao diện thân thiện"
+                data-en="Vocabulary practice with multiple modes and a friendly interface"
+              >
+                Vocabulary practice with multiple modes and a friendly interface
+              </p>
+              <a
+                href="https://github.com/Tptin07/Vocabulary.git"
+                class="work-link"
+                data-vi="Xem dự án →"
+                data-en="View Project →"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Project →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2
+          class="section-title"
+          data-vi="Liên hệ với tôi"
+          data-en="Get In Touch"
+        >
+          Get In Touch
+        </h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4 data-vi="Email" data-en="Email">Email</h4>
+                <p>
+                  <a href="mailto:ptin923@gmail.com">ptin923@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4 data-vi="Điện thoại" data-en="Phone">Phone</h4>
+                <p><a href="tel:+84333600347">+(84) 333 600 347</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4 data-vi="Địa điểm" data-en="Location">Location</h4>
+                <p data-vi="Đà Nẵng, Việt Nam" data-en="Da Nang, Viet Nam">
+                  Da Nang, Viet Nam
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              data-vi-placeholder="Họ và tên"
+              data-en-placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email"
+              data-vi-placeholder="Email của bạn"
+              data-en-placeholder="Your Email"
+              required
+            />
+            <textarea
+              id="message"
+              placeholder="Your Message"
+              data-vi-placeholder="Nội dung tin nhắn"
+              data-en-placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-vi="Gửi tin nhắn"
+              data-en="Send Message"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p
+          data-vi="&copy; 2026 Trần Phước Tín. Tất cả quyền được bảo lưu."
+          data-en="&copy; 2026 Tran Phuoc Tin. All rights reserved."
+        >
+          &copy; 2026 Tran Phuoc Tin. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
